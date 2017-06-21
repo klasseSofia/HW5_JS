@@ -35,3 +35,40 @@ function getClosestToZero() {
     }
 return result;
 }
+
+function sum( a, b ) {
+    return a+b;
+}
+
+function difference ( a, b ) {
+    return a-b;
+}
+
+function composition ( a, b ) {
+    return a*b;
+}
+
+function modulo ( a, b ) {
+    return a%b;
+}
+
+
+var D;
+var x1 = 0, x2 = 0;
+function discriminant(a,b,c) {
+    D = b*b - (4*a*c);
+    return D;
+}
+function root (b,a,c) {
+    discriminant(a,b,c)
+    x1 = (-b + Math.sqrt(D))/(2*a);
+    x2 = (-b - Math.sqrt(D))/(2*a);
+}
+function output (a,b,c) {
+    var out = console.log('Equal',a,'*x^2','+',b,'*x','+',c,'has two root ',' x1 =', x1,' x2 =', x2);
+    return out;
+}
+function quadratic(a,b,c) {
+    root(b,a,c);
+    output(a,b,c);
+}
